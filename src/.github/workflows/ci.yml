@@ -1,0 +1,25 @@
+name: C Build
+
+on:
+  push:
+    branches: [ main, development ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Build with Make
+      run: make
+      
+    - name: Run the program
+      run: |
+        echo -e "Иванов И.И.\n2\n5 4 5 4 5\nПетров П.П.\n3\n4 4 3 4 5\nСидоров С.С.\n1\n5 5 5 5 5\nСмирнов А.А.\n4\n3 3 4 3 3\nКозлов К.К.\n2\n4 5 4 5 4\nМорозов М.М.\n3\n5 4 5 4 4\nВолков В.В.\n1\n3 4 3 4 3\nСоколов С.С.\n4\n5 5 5 4 5\nЛебедев Л.Л.\n2\n4 4 4 4 4\nНовиков Н.Н.\n3\n5 5 5 5 5" | ./student_program
+      
+    - name: Clean
+      run: make clean
