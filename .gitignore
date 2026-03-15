@@ -1,0 +1,36 @@
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Executables
+*.exe
+*.out
+*.app
+labrabota2-1
+student_program
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Build directories
+obj/
+build/
+bin/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Submodule (игнорируем сам submodule, но не его содержимое)
+# tpmp-lab2-task3/  # НЕ РАСКОММЕНТИРУЙТЕ ЭТО!
+
