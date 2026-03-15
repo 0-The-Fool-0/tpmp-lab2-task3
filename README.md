@@ -22,3 +22,4 @@ make        # сборка программы
 ./student_program  # запуск
 make clean  # очистка
 # Actions test completed successfully
+# Test update
